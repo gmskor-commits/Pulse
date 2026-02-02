@@ -19,7 +19,7 @@ jobs:
       run: pip3 install flet
 
     - name: Build APK
-      run: flet build apk main.py --project "SimpleCounter" --product "간단한 카운터" --org "com.gmspi"
+      run: echo -e "y" | flet build apk main.py --project "SimpleCounter" --product "간단한 카운터" --org "com.gmspi"
 
     - uses: actions/upload-artifact@v4
       with:
