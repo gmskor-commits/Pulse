@@ -7,9 +7,8 @@ import flet as ft
 def main(page: ft.Page):
     page.title = "간단한 카운터 앱"
     page.theme_mode = ft.ThemeMode.DARK
-    page.bgcolor = "#0A0F1C"
-    page.window_width = 400
-    page.window_height = 600
+    page.bgcolor = ft.colors.BLUE_GREY_900
+    page.padding = 20
 
     # 카운터 상태
     counter = 0
@@ -116,4 +115,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.app(target=main, view=ft.AppView.FLET_APP)
