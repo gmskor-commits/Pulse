@@ -1,5 +1,5 @@
 """
-간단한 Flet 테스트 앱 - APK 빌드 테스트용
+간단한 Flet 테스트 앱 - APK 빌드 테스트용 v2
 """
 import flet as ft
 
