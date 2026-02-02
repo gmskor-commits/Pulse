@@ -1,0 +1,55 @@
+{
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Read",
+      "Write", 
+      "Edit",
+      "mcp__zai-mcp-server__analyze_image",
+      "mcp__zai-mcp-server__analyze_video", 
+      "mcp__web-search-prime__webSearchPrime",
+      "Bash(nul)",
+      "Bash(cat:*)",
+      "Bash(sort:*)",
+      "Bash(tee:*)",
+      "Bash(ssh:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "b824a5e113544d76a5fe6c4bab4f55f1.k6Y8sE8GNgWd49gX",
+    "ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "GLM-4.7"
+  },
+
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"후크 내용을 반드시 준수해야 합니다\" && timeout /t 1 > nul"
+          },
+          {
+            "type": "command",
+            "command": "type D:\\Study\\Pulse\\.claude\\hooks\\user_prompt_message.txt"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/session_start.py"
+          }
+        ]
+      }
+    ]
+  }
+}

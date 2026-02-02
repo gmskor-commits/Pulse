@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh:*)",
+      "Bash(tree:*)",
+      "Bash(py:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(where:*)",
+      "Bash(flet build:*)",
+      "Bash(flet:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
